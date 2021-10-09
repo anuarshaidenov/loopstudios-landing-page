@@ -57,6 +57,21 @@
 
   &__item {
     margin-right: 1.5rem;
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      width: 0px;
+      height: 1px;
+      background-color: $color-white;
+      transition: all 0.3s;
+    }
+    &:hover::after {
+      width: 24px;
+    }
 
     &:last-of-type {
       margin-right: 0;

@@ -178,6 +178,25 @@ a {
 
 .nav__item {
   margin-right: 1.5rem;
+  position: relative;
+}
+
+.nav__item::after {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "";
+  width: 0px;
+  height: 1px;
+  background-color: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav__item:hover::after {
+  width: 24px;
 }
 
 .nav__item:last-of-type {
