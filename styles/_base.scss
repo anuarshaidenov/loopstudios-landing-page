@@ -13,6 +13,18 @@ $color-very-dark-gray: hsl(0, 0%, 41%);
 
 // FONTS
 $font-base: 15px;
+$font-base-desktop: 18px;
+
+$font-title: 2.6rem;
+$font-title-small: 1.5rem;
+$font-section-title: 2.35rem;
+$font-base-text: 1.1rem;
+
+// MEDIA QUERIES
+$media-small: 350px;
+$media-medium: 500px;
+$media-large: 600px;
+$media-laptop: 800px;
 
 *,
 *::before,
@@ -24,4 +36,65 @@ $font-base: 15px;
 
 html {
   font-size: $font-base;
+
+  @media only screen and (min-width: $media-laptop) {
+    font-size: $font-base-desktop;
+  }
+}
+
+body,
+.btn-cta {
+  font-family: "Alata", sans-serif;
+}
+
+h1,
+h2,
+h3,
+a {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.translated {
+  transform: translateX(-150%);
+}
+
+.container {
+  padding: 0 2rem;
+  margin: 0 auto;
+  @media only screen and (min-width: $media-laptop) {
+    width: 90%;
+    max-width: 1200px;
+  }
+}
+
+.btn-cta {
+  display: block;
+  padding: 0.5em 2.5em;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border: 1px solid $color-black;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
 }

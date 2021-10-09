@@ -1,0 +1,80 @@
+.header {
+  padding: 3rem 0;
+  position: absolute;
+  width: 100%;
+
+  @media only screen and (min-width: $media-laptop) {
+    padding: 3rem 0;
+  }
+}
+
+.backdrop {
+  z-index: 50;
+  color: $color-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mobile-menu {
+  background-color: $color-black;
+  z-index: 50;
+  color: $color-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 50% 0;
+  transition: all 0.3s;
+
+  &__item {
+    text-transform: uppercase;
+    font-size: $font-section-title;
+    margin-bottom: 2rem;
+  }
+
+  @media only screen and (min-width: $media-laptop) {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__items {
+    display: none;
+    color: $color-white;
+    @media only screen and (min-width: $media-laptop) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    margin-right: 1.5rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__hamburger {
+    cursor: pointer;
+    z-index: 51;
+
+    @media only screen and (min-width: $media-laptop) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    width: 10rem;
+    display: flex;
+    z-index: 51;
+  }
+}

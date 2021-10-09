@@ -1,0 +1,31 @@
+.hero {
+  background-image: url(../images/mobile/image-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 30vh 0;
+  height: 90vh;
+
+  @media only screen and (min-width: $media-laptop) {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../images/desktop/image-hero.jpg);
+    height: 80vh;
+  }
+
+  &__title {
+    @media only screen and (max-width: $media-small) {
+      font-size: $font-title-small;
+    }
+    @media only screen and (min-width: $media-medium) {
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    @media only screen and (min-width: $media-laptop) {
+      margin: 0;
+      min-width: 50%;
+    }
+  }
+}

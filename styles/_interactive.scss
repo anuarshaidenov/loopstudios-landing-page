@@ -1,0 +1,37 @@
+.interactive {
+  padding: 5rem 0;
+  text-align: center;
+
+  display: grid;
+  grid-row-gap: 3rem;
+  justify-items: center;
+
+  @media only screen and (min-width: $media-laptop) {
+    grid-template-columns: 1fr 10rem 1fr;
+    grid-template-rows: 10rem 1fr 10rem;
+  }
+
+  &__img {
+    @media only screen and (min-width: $media-laptop) {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: $color-white;
+
+    @media only screen and (min-width: $media-laptop) {
+      grid-column: 2 / 4;
+      grid-row: 2 / 4;
+      padding: 3rem;
+      text-align: left;
+
+      h2 {
+        text-align: left;
+      }
+    }
+  }
+}

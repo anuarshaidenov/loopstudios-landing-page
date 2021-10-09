@@ -18,19 +18,39 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
+        background-color: black;
         font-size: 11px;
         text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: white;
       }
     </style>
   </head>
+
   <body>
+    <!-- <div class="backdrop"></div> -->
     <header class="header">
       <div class="container">
         <nav class="nav">
-          <a class="nav-logo" href="#"
+          <ul class="mobile-menu translated" id="mobile-menu">
+            <div class="container">
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">About</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">Careers</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">Events</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">Products</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">Suppoprt</a>
+              </li>
+            </div>
+          </ul>
+          <a class="nav__logo" href="#"
             ><img
               src="images/logo.svg"
               alt="Loopstudios logo"
@@ -45,15 +65,28 @@
             </li>
             <li class="nav__item"><a href="#" class="nav__link">Support</a></li>
           </ul>
-          <img src="images/icon-hamburger.svg" alt="" class="nav__hamburger" />
+          <img
+            src="images/icon-hamburger.svg"
+            alt=""
+            class="nav__hamburger"
+            id="hamburger"
+          />
+          <img
+            src="images/icon-close.svg"
+            alt=""
+            class="nav__hamburger nav__hamburger--close hidden"
+            id="hamburger-close"
+          />
         </nav>
       </div>
     </header>
+
     <section class="hero">
       <div class="container">
-        <h1 class="title">Immersive experiences that deliver</h1>
+        <h1 class="title hero__title">Immersive experiences that deliver</h1>
       </div>
     </section>
+
     <main class="main">
       <div class="container">
         <section class="interactive">
@@ -74,92 +107,99 @@
         </section>
 
         <section class="creations">
-          <h2 class="section-title">Our creations</h2>
-          <a href="#" class="creations__item creations__item--1">Deep Earth</a>
+          <h2 class="section-title creations__title">Our creations</h2>
+          <a href="#" class="creations__item creations__item--1"
+            ><span>Deep Earth</span></a
+          >
           <a href="#" class="creations__item creations__item--2"
-            >Night Arcade</a
+            ><span>Night Arcade</span></a
           >
           <a href="#" class="creations__item creations__item--3"
-            >Soccer Team VR</a
+            ><span>Soccer Team VR</span></a
           >
-          <a href="#" class="creations__item creations__item--4">The Grid</a>
+          <a href="#" class="creations__item creations__item--4"
+            ><span>The Grid</span></a
+          >
           <a href="#" class="creations__item creations__item--5"
-            >From up above</a
+            ><span>From up above</span></a
           >
           <a href="#" class="creations__item creations__item--6"
-            >Pocket Boreals</a
+            ><span>Pocket Boreals</span></a
           >
           <a href="#" class="creations__item creations__item--7"
-            >The Curiosity</a
+            ><span>The Curiosity</span></a
           >
           <a href="#" class="creations__item creations__item--8"
-            >Make it Fisheye</a
+            ><span>Make it Fisheye</span></a
           >
-          <a href="#" class="btn-cta">See All</a>
+          <a href="#" class="btn-cta creations__btn-cta">See All</a>
         </section>
       </div>
     </main>
     <footer class="footer">
-      <div class="footer__items-primary">
-        <a href="#" class="footer__logo"
-          ><img
-            src="images/logo.svg"
-            alt="Loopstudios logo"
-            class="footer__logo-img"
-        /></a>
-        <ul class="footer__items">
-          <li class="footer__item">
-            <a href="#" class="footer__link">About</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Careers</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Events</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Products</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Support</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__items-secondary">
-        <ul class="footer__items">
-          <li class="footer__item">
-            <a href="#"
-              ><img
-                src="images/icon-instagram.svg"
-                alt=""
-                class="footer__item-img"
-            /></a>
-          </li>
-          <li class="footer__item">
-            <a href="#"
-              ><img
-                src="images/icon-twitter.svg"
-                alt=""
-                class="footer__item-img"
-            /></a>
-          </li>
-          <li class="footer__item">
-            <a href="#"
-              ><img
-                src="images/icon-facebook.svg"
-                alt=""
-                class="footer__item-img"
-            /></a>
-          </li>
-          <li class="footer__item">
-            <a href="#"
-              ><img
-                src="images/icon-pinterest.svg"
-                alt=""
-                class="footer__item-img"
-            /></a>
-          </li>
-        </ul>
+      <div class="container container--footer">
+        <div class="footer__items-primary">
+          <a href="#" class="footer__logo"
+            ><img
+              src="images/logo.svg"
+              alt="Loopstudios logo"
+              class="footer__logo-img"
+          /></a>
+          <ul class="footer__items">
+            <li class="footer__item">
+              <a href="#" class="footer__link">About</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Careers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Events</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Products</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__items-secondary">
+          <ul class="footer__items footer__items--socials">
+            <li class="footer__item">
+              <a href="#"
+                ><img
+                  src="images/icon-instagram.svg"
+                  alt=""
+                  class="footer__item-img"
+              /></a>
+            </li>
+            <li class="footer__item">
+              <a href="#"
+                ><img
+                  src="images/icon-twitter.svg"
+                  alt=""
+                  class="footer__item-img"
+              /></a>
+            </li>
+            <li class="footer__item">
+              <a href="#"
+                ><img
+                  src="images/icon-facebook.svg"
+                  alt=""
+                  class="footer__item-img"
+              /></a>
+            </li>
+            <li class="footer__item">
+              <a href="#"
+                ><img
+                  src="images/icon-pinterest.svg"
+                  alt=""
+                  class="footer__item-img"
+              /></a>
+            </li>
+          </ul>
+          <p class="copyright">© 2021 Loopstudios. All rights reserved.</p>
+        </div>
       </div>
     </footer>
 
@@ -169,5 +209,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
